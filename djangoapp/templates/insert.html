@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+  <div class="offset-md-4 col-12 col-md-5">
+    <form action="insert" method="post" enctype="multipart/form-data">
+      {%csrf_token%}
+      <!-- in input tags, name should be the same as that in the database -->
+      <div class="form-group row" style="margin: 10px 0 10px 0">
+        <div class="col-12 col-md-12">
+          <label for="">Registration number</label>
+          <input
+            type="number"
+            name="regNo"
+            placeholder="Enter registration number"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="form-group row" style="margin: 10px 0 10px 0">
+        <div class="col-12 col-md-12">
+          <label for="">Firstname</label>
+          <input
+            type="text"
+            name="firstName"
+            placeholder="Enter your first name"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="form-group row" style="margin: 10px 0 10px 0">
+        <div class="col-12 col-md-12">
+          <label for="">Middlename</label>
+          <input
+            type="text"
+            name="middleName"
+            placeholder="Enter your middlename"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="form-group row" style="margin: 10px 0 10px 0">
+        <div class="col-12 col-md-12">
+          <label for="">Sir name</label>
+          <input
+            type="text"
+            name="sirName"
+            placeholder="Enter your sir name"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="form-group row" style="margin: 10px 0 10px 0">
+        <div class="col-12 col-md-12">
+          <label for="">Profile photo</label>
+          <input type="file" name="profileImage" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group row" style="margin: 10px 0 10px 0">
+        <div class="col-12 col-md-6">
+          <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

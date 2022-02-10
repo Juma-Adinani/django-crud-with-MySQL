@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Django Crud with MySQL</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light d-flex justify-content-around">
+      <div class="container">
+        <a class="navbar-brand" href="insert"><strong>D J A N G O - CRUD</strong></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="insert"
+              >Add student</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="display">View students</a>
+          </li>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" id="app">{% block content %} {% endblock %}</div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script> -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+  <footer>
+    simple crud application in django&copy;2022
+  </footer>
+</html>
